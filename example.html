@@ -5,13 +5,40 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="HTML5idate.js"></script>
+        <style>
+            body {
+                padding: 25px;
+                font-family: sans-serif;
+            }
+            .dateInput {
+                margin: 10px;
+                padding: 5px;
+                font-size: 16px;
+                border: 1px solid orange;
+                width: 180px;
+            }
+            .dateInput span:focus {
+                background-color: #008cff;
+                color: white;
+            }
+        </style>
     </head>
     <body>
+        <h1>jsInputDateReplacer</h1>
+        <p>If your browser doesn't support input date fields, they will be replaced with an emulated one.</p>
+        <ul>
+            <li>click on a fragment to move the focus on it</li>
+            <li>automatically jumps to the next fragment</li>            
+            <li>increase/decrease the fragment content with up and down arrow keys</li>
+            <li>backspace and delete for clear the active fragment</li>
+        </ul>
         <form>
-            <input id="myInputDate" type="date" value="2017-11-11">
+            <input id="myInputDate" type="date" class="dateInput" value="2017-11-11">
+            <input id="myInputDatetime" type="datetime-local" class="dateInput" value="2017-11-11 15:32">
         </form>
         <script type="text/javascript">
             setDateField('myInputDate');
+            setDateField('myInputDatetime');
         </script>
     </body>
 </html>
